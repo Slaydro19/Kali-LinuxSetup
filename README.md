@@ -1,4 +1,4 @@
-# Kali-LinuxSetup
+# Kali-LinuxSetup [UNFINISHED]
 Installing Kali Linux to windows (WSL2) 
 
 ## Getting this error after installing Kali from the Microsoft Store?
