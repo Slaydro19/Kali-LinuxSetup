@@ -32,63 +32,6 @@ If this happens to you, it means Kali didn’t register properly. Here’s how I
 After these steps, Kali launched correctly and asked me to set a username and password.
 
 
-
-```
-WslRegisterDistribution failed with error: 0x80004005
-```
-
-If this happens to you, it means Kali didn’t register properly. Here’s how I fixed it:
-
-1. Open PowerShell as Administrator
-2. Run:
-   ```
-   dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-   dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-   ```
-3. Restart your computer
-4. Download and install the WSL2 kernel update from: https://aka.ms/wsl2kernel
-5. After that, open PowerShell (Admin) and run:
-   ```
-   wsl --update
-   ```
-6. Then set WSL 2 as your default version:
-   ```
-   wsl --set-default-version 2
-   ```
-7. Finally, install Kali Linux directly through PowerShell:
-   ```
-   wsl --install -d kali-linux
-   ```
-
-After these steps, Kali launched correctly and asked me to set a username and password.
-
-
-
-```
-WslRegisterDistribution failed with error: 0x80004005
-```
-
-If this happens to you, it means Kali didn’t register properly. Here’s how I fixed it:
-
-1. Open PowerShell as Administrator
-2. Run:
-   ```
-   dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-   dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-   ```
-3. Restart your computer
-4. Download and install the WSL2 kernel update from: https://aka.ms/wsl2kernel
-5. In PowerShell (Admin), set WSL 2 as the default:
-   ```
-   wsl --set-default-version 2
-   ```
-6. Reinstall Kali with:
-   ```
-   wsl --install -d kali-linux
-   ```
-
-Once that's done, Kali should launch and prompt you to create your UNIX username and password.
-
 How i installed Kali Linux on a windows 11 machine 
  # What I used  -Windows 10/11
     
