@@ -19,11 +19,27 @@ If you dont have the prerequiste the website asks for just search "Update" in yo
 ![image](https://github.com/user-attachments/assets/99b46afd-8de6-498d-a7d9-f18624602112)
 
 # Downloading and Installing Kali Linux  
-1. Open the search bar again on your desktop and then typePowershell make sure you run it as administrator. You can either right click and hit "Run As Administrator"or depending on which version on windows you have installed youu wont need to right click it as its already and option from the right side panel when you search for using the search bar
-2. When power shell is open simply type or copy Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux Once typed out or copied simply hit enter and this should appear
+1. Open the search bar again on your desktop and then type PowerShell. Make sure you run it as an administrator. You can either right click and hit "Run As Administrator"or, depending on which version of Windows you have installed, you won't need to click it right as it's already an option from the right side panel when you search using the search bar
+2. When PowerShell is open, simply type or copy Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux. Once typed out or copied, simply hit enter, and this should appear
 
-![Screenshot 2025-05-19 160433](https://github.com/user-attachments/assets/e2f373c0-7a0f-4256-b787-61d93253c21d)
+![Screenshot 2025-05-19 163705](https://github.com/user-attachments/assets/1fdfc0bd-816f-48d3-af0c-644ab5659591)
 
-3. Wait for it to finish and its going to show another pop-up asking if you want to restart simply hit "Y" and it will restart
 
+3. Wait for it to finish, and it's going to show another pop-up asking if you want to restart Simply hit "Y" and it will restart
+4. Next, we will update the kernel package for WLS. Open a web browser and either type or copy https://aka.ms/wsl2kernel It will redirect you to a page where you're going to click underneath "Download the latest package"
+
+![Screenshot 2025-05-19 162623](https://github.com/user-attachments/assets/a862cc71-cc80-466e-96a8-5b3d0d2d483f)
+
+5. Now, when prompted, go through the installation wizard and once completed, reopen PowerShell and run it in administrator mode again
+6. we are going to be setting WSL 2 as our default version and to do this simply copy and paste this command or type it in wsl --set-default-version 2. Once completed you should see this screen letting you know you have successfully completed this command. Also dont close PowerShell quite yet we still need it.
+
+   ![Screenshot 2025-05-19 163918](https://github.com/user-attachments/assets/f8768646-4f55-4c1a-9ff4-bfa90ee98e94)
+
+   7. Now the fun part, simply head over to the Microsoft Store, you can reach that by typing in the desktop search bar "Store" and it will appear. Once in the store, find the store's search bar and type "Kali Linux" Click on the page and download it. Once finished, close the store App and proceed to the desktop search bar, once there, search and find "Kali Linux", once found, open it
+
+      *DISCLAIMER* make sure you wait on the store page, closing it early can cause it to not download and will have to reopen to properly have it installed.
+
+ ![Screenshot 2025-05-19 164222](https://github.com/user-attachments/assets/af02e22c-cb48-4cd9-9f18-88d9c94935da)
+
+8. Once opened, it will prompt you to create a username and password so fill it out to whatever you'll remember
 
