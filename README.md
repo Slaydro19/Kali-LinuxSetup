@@ -1,5 +1,33 @@
 # Kali-LinuxSetup
 Installing Kali Linux to windows (WSL2) 
+
+## Getting this error after installing Kali from the Microsoft Store?
+
+```
+WslRegisterDistribution failed with error: 0x80004005
+```
+
+If this happens to you, it means Kali didn’t register properly. Here’s how I fixed it:
+
+1. Open PowerShell as Administrator
+2. Run:
+   ```
+   dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+   dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+   ```
+3. Restart your computer
+4. Download and install the WSL2 kernel update from: https://aka.ms/wsl2kernel
+5. In PowerShell (Admin), set WSL 2 as the default:
+   ```
+   wsl --set-default-version 2
+   ```
+6. Reinstall Kali with:
+   ```
+   wsl --install -d kali-linux
+   ```
+
+Once that's done, Kali should launch and prompt you to create your UNIX username and password.
+
 How i installed Kali Linux on a windows 11 machine 
  # What I used  -Windows 10/11
     
@@ -43,3 +71,9 @@ If you dont have the prerequiste the website asks for just search "Update" in yo
 
 8. Once opened, it will prompt you to create a username and password so fill it out to whatever you'll remember
 
+
+## What I Learned
+
+- Installing Kali from the Microsoft Store won’t work unless WSL 2 is fully set up first
+- PowerShell must be run as Administrator or commands silently fail
+- That `0x80004005` error is common and fixable, but most tutorials skip it
